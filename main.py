@@ -17,8 +17,8 @@ with open('config.json', 'r') as f: CONFIGDATA = json.load(f)
 
 # app
 TOKEN = os.environ.get("TOKEN") or CONFIGDATA.get("TOKEN", "6266474006:AAGr5-dbhpUd8Afeu6_GJf6Cri3vUOh3-b8")
-HASH = os.environ.get("HASH") or CONFIGDATA.get("HASH", "016d5e115a06ddfb6121823d72ae4d8c")
-ID = os.environ.get("ID") or CONFIGDATA.get("ID", "15823382")
+HASH = os.environ.get("HASH") or CONFIGDATA.get("HASH", "20ca7e6687c281e11782856c7efd0ff7")
+ID = os.environ.get("ID") or CONFIGDATA.get("ID", "26305247")
 app = Client("my_bot", api_id=ID, api_hash=HASH, bot_token=TOKEN)
 
 # preiumum
