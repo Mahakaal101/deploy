@@ -122,7 +122,7 @@ def status(folder,message,fsize,filename):
         if os.path.exists(folder + "/vid.mp4.part-Frag0") or os.path.exists(folder + "/vid.mp4.part"):
             break
     
-    time.sleep(3)
+    time.sleep(2)
     while os.path.exists(folder + "/" ):
         if "Status: Merging" in app.get_messages(message.chat.id, message.id).text: return
 
@@ -135,9 +135,9 @@ def status(folder,message,fsize,filename):
 
         try:
             app.edit_message_text(message.chat.id, message.id, getformatmsg(filename,"Downloading",size,fsize))
-            time.sleep(10)
+            time.sleep(2)
         except:
-            time.sleep(5)
+            time.sleep(2)
 
     if iswin != "0": os.remove(f"tempS-{message.id}.txt")
 
@@ -148,15 +148,15 @@ def upstatus(statusfile,message,filename):
         if os.path.exists(statusfile):
             break
 
-    time.sleep(3)      
+    time.sleep(2)      
     while os.path.exists(statusfile):
         with open(statusfile,"r") as upread:
             txt = upread.read().split()
         try:
             app.edit_message_text(message.chat.id, message.id, getformatmsg(filename,"Uploading",float(txt[0]),float(txt[1])))
-            time.sleep(10)
+            time.sleep(2)
         except:
-            time.sleep(5)
+            time.sleep(2)
 
 
 # progress writter
