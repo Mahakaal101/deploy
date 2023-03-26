@@ -16,25 +16,25 @@ from split import TG_SPLIT_SIZE, split_file, get_path_size, ss, temp_channel, is
 with open('config.json', 'r') as f: CONFIGDATA = json.load(f)
 
 # app
-TOKEN = os.environ.get("TOKEN") or CONFIGDATA.get("TOKEN", "")
-HASH = os.environ.get("HASH") or CONFIGDATA.get("HASH", "")
-ID = os.environ.get("ID") or CONFIGDATA.get("ID", "")
+TOKEN = os.environ.get("TOKEN") or CONFIGDATA.get("TOKEN", "6266474006:AAGr5-dbhpUd8Afeu6_GJf6Cri3vUOh3-b8")
+HASH = os.environ.get("HASH") or CONFIGDATA.get("HASH", "20ca7e6687c281e11782856c7efd0ff7")
+ID = os.environ.get("ID") or CONFIGDATA.get("ID", "26305247")
 app = Client("my_bot", api_id=ID, api_hash=HASH, bot_token=TOKEN)
 
 # preiumum
 if isPremmium: acc = Client("myacc", api_id=ID, api_hash=HASH, session_string=ss)
 
 # optionals
-AUTH = os.environ.get("AUTH") or CONFIGDATA.get("AUTH", "")
+AUTH = os.environ.get("AUTH") or CONFIGDATA.get("AUTH", "5152847809")
 AUTHUSERS = AUTH.split()
 BAN = os.environ.get("BAN") or CONFIGDATA.get("BAN", "")
 BANNEDUSERS = BAN.split()
 
 # control
-OWNER = os.environ.get("OWNER") or CONFIGDATA.get("OWNER", "")
+OWNER = os.environ.get("OWNER") or CONFIGDATA.get("OWNER", "5104293442")
 OWNERS = OWNER.split()
-TARGET = os.environ.get("TARGET") or CONFIGDATA.get("TARGET", "")
-LINK = os.environ.get("LINK") or CONFIGDATA.get("LINK", "")
+TARGET = os.environ.get("TARGET") or CONFIGDATA.get("TARGET", "-1001740189478")
+LINK = os.environ.get("LINK") or CONFIGDATA.get("LINK", "https://t.me/Film_Update_Official")
 
 
 # setting commands
